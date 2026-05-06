@@ -11,10 +11,11 @@ function Login() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center px-6 py-10">
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-primary/20 blur-[120px]" />
+    <div className="min-h-screen w-full bg-black flex items-start justify-center">
+      <div className="relative w-full max-w-md min-h-screen bg-gradient-hero px-5 py-8 overflow-hidden">
+        <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[280px] w-[280px] rounded-full bg-primary/25 blur-[100px]" />
 
-      <div className="relative w-full max-w-md">
+        <div className="relative w-full">
         <Link to="/" className="flex items-center gap-2 justify-center mb-8">
           <div className="h-10 w-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow">
             <Zap className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />

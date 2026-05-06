@@ -1,13 +1,15 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Home, Map, GraduationCap, User, Shield } from "lucide-react";
+import { Home, Map, GraduationCap, User, Shield, type LucideIcon } from "lucide-react";
 
-const items = [
+type NavItem = { to: string; label: string; icon: LucideIcon; exact?: boolean };
+
+const items: NavItem[] = [
   { to: "/app", label: "Início", icon: Home, exact: true },
   { to: "/app/map", label: "Mapa", icon: Map },
   { to: "/app/courses", label: "Cursos", icon: GraduationCap },
   { to: "/app/profile", label: "Perfil", icon: User },
   { to: "/app/admin", label: "Admin", icon: Shield },
-] as const;
+];
 
 export function BottomNav() {
   const path = useRouterState({ select: (s) => s.location.pathname });

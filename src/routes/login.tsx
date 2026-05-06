@@ -83,6 +83,7 @@ function Login() {
           Modo demonstração · qualquer dado funciona
         </p>
       </div>
+      </div>
     </div>
   );
 }
